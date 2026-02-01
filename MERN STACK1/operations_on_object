@@ -1,0 +1,53 @@
+/*let emp={
+    eno:1,
+    name:'ravi'
+}
+console.log(emp)
+//add property dynamically
+emp.city='hyderabad'
+console.log(emp)
+//update property dynamically
+emp.eno=12
+console.log(emp)
+//delete a property
+delete emp.name
+console.log(emp)
+//freeze the object-if an object is freezed it can't be modified
+Object.freeze(emp)
+emp.eno=12345
+emp.mobile=903098765
+console.log(emp)
+//read all key
+console.log(Object.keys(emp))
+//read all values
+console.log(Object.values(emp))
+let test={
+    a:10,
+    b:20,
+    c:30
+}
+//Unpack object(destructing)
+//The variables which are in object should be match the variables in the npacking one else it gives undefined as shown below
+
+let {a,x,c}=test;
+console.log(a)
+console.log(x)*/
+let student={
+    sno:100,
+    name:'manoghna',
+    marks:[10,30,70],
+    address:{
+        city:'hyderabad',
+        pincode:55566666
+    },
+    getData:function(){
+        let sum=0
+        for(let i of student.marks){
+            sum+=i;
+        }
+        return sum/this.marks.length
+    }
+}
+console.log(student.marks)
+console.log(student.address.city)
+console.log(student.getData())

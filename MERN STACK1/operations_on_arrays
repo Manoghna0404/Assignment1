@@ -1,0 +1,23 @@
+let skills=['html','css','javascript']
+let[skills1,skills2,skills3]=skills
+console.log(skills2)
+//Inserting  n no.of elements at start
+skills.unshift('angular','java')
+console.log(skills)
+//Inserting at end
+skills.push('python')
+console.log(skills)
+//Inserting in between with index number
+//splice(index,delete count,elements)
+skills.splice(1,0,'scale')
+console.log(skills)
+//delete at start
+skills.shift()
+console.log(skills)
+//at end
+skills.pop()
+console.log(skills)
+//delete in between splice(index,delete count)
+skills.splice(1,2)
+console.log(skills)
+//write a function that can extract marks grater than 70 pack them into array and return it
