@@ -66,6 +66,7 @@ Content-Type:application/json
 
 DELETE http://localhost:4000/product-api/product/697ef1d1115cfed7c4e3a248
 
+<<<<<<< HEAD
 ###user authentication(Login)
 POST http://localhost:4000/user-api/auth
 Content-Type:application/json
@@ -78,3 +79,5 @@ Content-Type:application/json
 
 ###req for protected route
 GET http://localhost:4000/user-api/test
+=======
+>>>>>>> 32e11db4f19eef8c25318cab3bb9398f8a280710

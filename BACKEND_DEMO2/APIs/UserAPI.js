@@ -1,14 +1,18 @@
 import exp from 'express';
 import {UserModel} from '../models/userModels.js';
+<<<<<<< HEAD
 import {hash,compare} from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import {verifyToken} from '../middlewares/verifyToken.js'
+=======
+>>>>>>> 32e11db4f19eef8c25318cab3bb9398f8a280710
 export const userApp=exp.Router()
 
 //create user
 userApp.post('/users',async(req,res)=>{
     //get newuser from 
     let newUser=req.body;
+<<<<<<< HEAD
     //create hash for password or username
     let hashedPassword=await hash(newUser.password,12)
     newUser.password=hashedPassword
@@ -18,12 +22,24 @@ userApp.post('/users',async(req,res)=>{
     await newUserDoc.save();
     //send response as new user created
     res.status(200).json({message:"New user created",payload:newUserDoc})
+=======
+    //create new user in db
+    let newUserDoc=UserModel(newUser)
+    //save to db
+    await newUserDoc.save();
+    //send response as new user created
+    res.status(200).json({message:"New user created"})
+>>>>>>> 32e11db4f19eef8c25318cab3bb9398f8a280710
 
 })
 //test route
 userApp.get('/users',async(req,res)=>{
     //get all users from db
+<<<<<<< HEAD
     let usersList=await UserModel.find({},{username:1,_id:0,age:1,password:1})
+=======
+    let usersList=await UserModel.find()
+>>>>>>> 32e11db4f19eef8c25318cab3bb9398f8a280710
     //send the response users list
     res.status(200).json({message:"users list",payload:usersList})
 })
@@ -57,6 +73,7 @@ userApp.delete("/user/:id",async(req,res)=>{
     //send response as user deleted
     res.status(200).json({message:"user deleted",payload:deletedUser})
 })
+<<<<<<< HEAD
 
 userApp.post('/auth',async(req,res)=>{
     //get user cred obj
@@ -92,3 +109,5 @@ userApp.post('/auth',async(req,res)=>{
 userApp.get('/test',verifyToken,(req,res)=>{
     res.json({message:"test route"});
 });
+=======
+>>>>>>> 32e11db4f19eef8c25318cab3bb9398f8a280710

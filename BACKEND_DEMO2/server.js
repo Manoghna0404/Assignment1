@@ -1,5 +1,6 @@
 import exp from 'express';
 import {userApp} from './APIs/UserAPI.js';
+<<<<<<< HEAD
 import{productApp} from './APIs/productAPI.js';
 import cookieParser from 'cookie-parser';
 import {connect} from 'mongoose';
@@ -9,6 +10,13 @@ app.use(cookieParser())
 app.use(exp.json())
 
 
+=======
+import{productApp} from './APIs/productAPI.js'
+import {connect} from 'mongoose'
+const app=exp()
+//to parse json body from request
+app.use(exp.json())
+>>>>>>> 32e11db4f19eef8c25318cab3bb9398f8a280710
 //function to connect to database
 async function connectDB(){
     //connect to mongodb server

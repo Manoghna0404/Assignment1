@@ -11,10 +11,15 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+<<<<<<< HEAD
     "bcryptjs": "^3.0.2",
     "cookie-parser": "^1.4.7",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.1.5"
+=======
+    "express":"^5.2.1",
+    "mongoose":"^9.1.5"
+>>>>>>> 32e11db4f19eef8c25318cab3bb9398f8a280710
   }
 }
