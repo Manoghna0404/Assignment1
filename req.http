@@ -1,0 +1,77 @@
+GET http://localhost:3000/user-api/users
+
+
+###
+POST http://localhost:3000/user-api/user
+Content-Type: application/json
+
+{
+    "id":1,
+    "name":"manoghna",
+    "age":19
+}
+
+
+###
+PUT http://127.0.0.1:3000/user-api/user
+Content-Type: application/json
+
+{
+    "id":1,
+    "name":"Lakshmi Manoghna",
+    "age":20
+}
+
+###
+GET http://localhost:3000/user-api/user/1
+
+###
+DELETE http://localhost:3000/user-api/user/1
+
+
+###
+
+
+
+
+
+GET http://localhost:3000/product-api/products
+
+###
+
+POST http://localhost:3000/product-api/product
+Content-Type: application/json
+
+{
+    "id":1,
+    "name":"kissan-jam",
+    "price":200,
+    "brand":"kissan"
+}
+###
+
+PUT http://localhost:3000/product-api/product
+Content-Type: application/json
+
+{
+    "id":1,
+    "name":"kitkat",
+    "price":300,
+    "brand":"Nestle"
+}
+
+###
+
+GET http://localhost:3000/product-api/products/1
+
+###
+
+GET http://localhost:3000/product-api/products-name/kissan-jam
+
+###
+
+GET http://localhost:3000/product-api/products-brand/kissan
+
+###
+
+DELETE http://localhost:3000/product-api/product/1
